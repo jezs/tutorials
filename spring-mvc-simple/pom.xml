@@ -40,6 +40,31 @@
 			<artifactId>spring-core</artifactId>
 			<version>${springframework.version}</version>
 		</dependency>
+		<dependency>
+			<groupId>net.sf.jasperreports</groupId>
+			<artifactId>jasperreports</artifactId>
+			<version>6.2.2</version>
+			<exclusions>
+				<exclusion>  <!-- declare the exclusion here -->
+				  <groupId>com.lowagie</groupId>
+				  <artifactId>itext</artifactId>
+				</exclusion>
+				<exclusion>  <!-- declare the exclusion here -->
+				    <groupId>org.olap4j</groupId>
+				    <artifactId>olap4j</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+		    <groupId>org.olap4j</groupId>
+		    <artifactId>olap4j</artifactId>
+		    <version>1.2.0</version>
+		</dependency>
+		<dependency>
+		    <groupId>com.lowagie</groupId>
+		    <artifactId>itext</artifactId>
+		    <version>2.1.7</version>
+		</dependency>
 	</dependencies>
 	<build>
 		<pluginManagement>
@@ -67,4 +92,15 @@
 		</pluginManagement>
 		<finalName>springMvcSimple</finalName>
 	</build>
+	<repositories>
+      <repository>
+		<id>MVN repository</id>
+		<url>https://mvnrepository.com/artifact/</url>
+      </repository>
+      <repository>
+		<id>Repo1 repository</id>
+		<url>https://repo1.maven.org/maven2/</url>
+      </repository>
+    </repositories>
+
 </project>
